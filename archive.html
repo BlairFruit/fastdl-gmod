@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Archive Login</title>
+    <script>
+        function checkLogin() {
+            var user = document.getElementById("userBox").value;
+            var pass = document.getElementById("passBox").value;
+            
+            if (user == "dopefinder49" && pass == "pendrive") {
+                document.getElementById("loginBox").style.display = "none";
+                document.getElementById("archiveContent").style.display = "block";
+            } else {
+                alert("wrong username or password! try again.");
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#c0c0c0" text="#000000" link="#0000ff">
+    <center>
+        <h2>My Archive</h2>
+        <hr width="50%">
+    </center>
+
+    <center id="loginBox">
+        <h3>Admin Mode</h3>
+        <p>Please enter your credentials to access this page.</p>
+        
+        <table border="2" cellpadding="5" bgcolor="#c0c0c0">
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="userBox"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="passBox"></td>
+            </tr>
+        </table>
+        <br>
+        <button onclick="checkLogin()">Submit</button>
+    </center>
+
+    <center id="archiveContent" style="display:none;">
+        <h3><font color="green">Logged In</font></h3>
+        
+        <table border="2" cellpadding="10" bgcolor="#ffffff">
+            <tr>
+                <td><b>File:</b>vision_01_recover.mp4</td>
+                <td><a href="dopefinder49_recover.mp4" download>Click Here to Download Video</a></td> 
+            </tr>
+        </table>
+    </center>
+
+    <br><br><br>
+    
+    <center>
+        <hr width="50%">
+        <a href="index.html">Click here to go back to the main page</a>
+    </center>
+</body>
+</html>
