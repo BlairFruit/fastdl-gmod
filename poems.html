@@ -1,6 +1,27 @@
 <html>
 <head>
     <title>My Poems</title>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert("don't even think about it buddy");
+        });
+
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 85) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+        };
+    </script>
 </head>
 <body bgcolor="#c0c0c0" text="#000000" link="#0000ff">
     <center>

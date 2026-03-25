@@ -2,6 +2,28 @@
 <head>
     <title>Archive Login</title>
     <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert("don't even think about it buddy");
+        });
+
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 85) {
+                alert("don't even think about it buddy");
+                return false;
+            }
+        };
+    </script>
+
+    <script>
         function checkLogin() {
             var user = document.getElementById("userBox").value;
             var pass = document.getElementById("passBox").value;
